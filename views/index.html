@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="todoList">
+<head>
+    <meta charset="UTF-8">
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/vendors/angular/angular.min.js"></script>
+    <script src="/javascripts/script.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<h1>Todo List</h1>
+<div ng-controller="MainController">
+    <form ng-submit="addTodo()">
+        <input type="text" ng-model="todoText"  size="65"
+               placeholder="add task here">
+        <button class="btn-primary" type="submit">
+            <span class="glyphicon glyphicon-list-alt"></span> Add To List
+        </button>
+    </form>
+    <ul class="list-group">
+        <li class=list-group-item ng-repeat="todo in todos">
+            <input type="checkbox" ng-model="todo.done">
+            <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+    </ul>
+    <div class="wrapper">
+    <button class="btn-danger" ng-click="removeItems()"><span class="glyphicon glyphicon-remove"></span> Remove Completed Tasks</button>
+    </div>
+</div>
+</body>
+</html>
+
+
