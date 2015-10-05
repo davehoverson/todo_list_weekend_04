@@ -1,11 +1,12 @@
 body{
     background-image: url(/images/people.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .middle {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
     background: rgba(216,216,216,0.8);
 }
