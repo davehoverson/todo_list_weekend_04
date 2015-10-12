@@ -3,7 +3,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var tasks = require('./routes/tasks')
+var tasks = require('./routes/tasks');
 
 var app = express();
 
@@ -34,7 +34,6 @@ app.use('/tasks', tasks);
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
-  next(err);
 });
 
 
